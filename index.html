@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solitaire Visa Mohali - Your Trusted Visa Partner</title>
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, #1a237e 0%, #283593 100%);
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo img {
+            height: 50px;
+            width: auto;
+        }
+
+        .logo h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        .logo span {
+            color: #ffd700;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffd700;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(26, 35, 126, 0.8), rgba(40, 53, 147, 0.9)), url('https://images.unsplash.com/photo-1523531294919-4bcd7c65e216?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 5rem 1rem;
+            margin-bottom: 3rem;
+        }
+
+        .hero h2 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #ffd700;
+            color: #1a237e;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            border: 2px solid #ffd700;
+        }
+
+        .cta-button:hover {
+            background: transparent;
+            color: #ffd700;
+        }
+
+        /* Services Section */
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #1a237e;
+            font-size: 2.2rem;
+            position: relative;
+        }
+
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: #ffd700;
+            margin: 10px auto;
+            border-radius: 2px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 4rem;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: center;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            color: #1a237e;
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            color: #1a237e;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        /* Countries Section */
+        .countries-section {
+            background: #f0f2f5;
+            padding: 4rem 0;
+            margin-bottom: 4rem;
+        }
+
+        .countries-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .country-card {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s;
+        }
+
+        .country-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .country-flag {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .country-card h4 {
+            color: #1a237e;
+            margin-bottom: 10px;
+        }
+
+        /* Contact Form */
+        .contact-section {
+            padding: 4rem 0;
+            background: white;
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: start;
+        }
+
+        .contact-info h3 {
+            color: #1a237e;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+
+        .contact-info p {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .contact-info i {
+            color: #1a237e;
+            width: 20px;
+        }
+
+        .contact-form {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #1a237e;
+            font-weight: 500;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: border 0.3s;
+        }
+
+        .form-control:focus {
+            border-color: #1a237e;
+            outline: none;
+        }
+
+        .submit-btn {
+            background: #1a237e;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+            width: 100%;
+        }
+
+        .submit-btn:hover {
+            background: #283593;
+        }
+
+        /* Footer */
+        footer {
+            background: #1a237e;
+            color: white;
+            padding: 3rem 0 1.5rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            color: #ffd700;
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-section a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: #ffd700;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+            }
+            
+            .hero h2 {
+                font-size: 2.2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+        }
+
+        /* Success/Error Messages */
+        .message {
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            display: none;
+        }
+
+        .success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <i class="fas fa-passport" style="font-size: 2.5rem; color: #ffd700;"></i>
+                <h1>Solitaire <span>Visa</span> Mohali</h1>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul id="navMenu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#countries">Countries</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h2>Your Trusted Partner for Visa Solutions</h2>
+            <p>Professional visa consultancy services for study, work, travel, and immigration to countries worldwide. Let us handle the paperwork while you prepare for your journey.</p>
+            <a href="#contact" class="cta-button">Get Free Consultation</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="container" id="services">
+        <h2 class="section-title">Our Visa Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h3>Study Visa</h3>
+                <p>Comprehensive guidance for student visas to top study destinations like USA, UK, Canada, Australia, and more.</p>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-briefcase"></i>
+                </div>
+                <h3>Work Visa</h3>
+                <p>Assistance with work permits, employment visas, and skilled migration programs for professionals.</p>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-plane"></i>
+                </div>
+                <h3>Tourist Visa</h3>
+                <p>Simplified tourist visa processing for holiday, family visits, and business trips to various countries.</p>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-home"></i>
+                </div>
+                <h3>Immigration</h3>
+                <p>Permanent residency and citizenship consultation for countries with immigration programs.</p>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-file-contract"></i>
+                </div>
+                <h3>Documentation</h3>
+                <p>Complete documentation support including application forms, financial proofs, and verification.</p>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-headset"></i>
+                </div>
+                <h3>Visa Consultation</h3>
+                <p>One-on-one consultation to understand visa requirements and create a personalized application strategy.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Countries Section -->
+    <section class="countries-section" id="countries">
+        <div class="container">
+            <h2 class="section-title">Popular Destinations</h2>
+            <div class="countries-grid">
+                <div class="country-card">
+                    <div class="country-flag">🇺🇸</div>
+                    <h4>United States</h4>
+                    <p>Study, Work, Tourist Visas</p>
+                </div>
+                
+                <div class="country-card">
+                    <div class="country-flag">🇨🇦</div>
+                    <h4>Canada</h4>
+                    <p>Express Entry, Study Permits</p>
+                </div>
+                
+                <div class="country-card">
+                    <div class="country-flag">🇬🇧</div>
+                    <h4>United Kingdom</h4>
+                    <p>Student Visa, Work Visa</p>
+                </div>
+                
+                <div class="country-card">
+                    <div class="country-flag">🇦🇺</div>
+                    <h4>Australia</h4>
+                    <p>Skilled Migration, Student Visa</p>
+                </div>
+                
+                <div class="country-card">
+                    <div class="country-flag">🇩🇪</div>
+                    <h4>Germany</h4>
+                    <p>Job Seeker, Student Visa</p>
+                </div>
+                
+                <div class="country-card">
+                    <div class="country-flag">🇸🇬</div>
+                    <h4>Singapore</h4>
+                    <p>Employment Pass, Tourist Visa</p>
+                </div>
+                
+                <div class="country-card">
+                    <div class="country-flag">🇳🇿</div>
+                    <h4>New Zealand</h4>
+                    <p>Skilled Migrant, Work Visa</p>
+                </div>
+                
+                <div class="country-card">
+                    <div class="country-flag">🇫🇷</div>
+                    <h4>France</h>
+                    <p>Student Visa, Tourist Visa</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> <strong>Address:</strong> SCO 123, Sector 70, Mohali, Punjab, India</p>
+                    <p><i class="fas fa-phone"></i> <strong>Phone:</strong> +91 98765 43210</p>
+                    <p><i class="fas fa-envelope"></i> <strong>Email:</strong> info@solitairevisamohali.com</p>
+                    <p><i class="fas fa-clock"></i> <strong>Working Hours:</strong> Mon-Sat: 9:00 AM - 7:00 PM</p>
+                    
+                    <div style="margin-top: 30px;">
+                        <h4>Why Choose Us?</h4>
+                        <ul style="list-style-type: none; margin-top: 10px;">
+                            <li><i class="fas fa-check-circle" style="color: #4CAF50;"></i> 10+ Years of Experience</li>
+                            <li><i class="fas fa-check-circle" style="color: #4CAF50;"></i> High Success Rate</li>
+                            <li><i class="fas fa-check-circle" style="color: #4CAF50;"></i> Transparent Process</li>
+                            <li><i class="fas fa-check-circle" style="color: #4CAF50;"></i> Personalized Guidance</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <div id="messageContainer"></div>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="service">Service Interested In</label>
+                            <select id="service" class="form-control">
+                                <option value="">Select a service</option>
+                                <option value="Study Visa">Study Visa</option>
+                                <option value="Work Visa">Work Visa</option>
+                                <option value="Tourist Visa">Tourist Visa</option>
+                                <option value="Immigration">Immigration</option>
+                                <option value="Documentation">Documentation</option>
+                                <option value="Consultation">Consultation</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="country">Destination Country</label>
+                            <select id="country" class="form-control">
+                                <option value="">Select a country</option>
+                                <option value="USA">United States</option>
+                                <option value="Canada">Canada</option>
+                                <option value="UK">United Kingdom</option>
+                                <option value="Australia">Australia</option>
+                                <option value="Germany">Germany</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" class="form-control" rows="4" placeholder="Tell us about your requirements..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Solitaire Visa Mohali</h3>
+                    <p>Your trusted partner for all visa and immigration needs. We provide professional guidance and support to make your international dreams come true.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#countries">Countries</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li><a href="#services">Study Visa</a></li>
+                        <li><a href="#services">Work Visa</a></li>
+                        <li><a href="#services">Tourist Visa</a></li>
+                        <li><a href="#services">Immigration</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> sector 60 , Mohali</li>
+                        <li><i class="fas fa-phone"></i> +91 9646471099</li>
+                        <li><i class="fas fa-envelope"></i> info@solitairevisamohali.com</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 Solitaire Visa Mohali. All rights reserved.</p>
+                <p style="margin-top: 5px; font-size: 0.8rem;">This is a dummy website created for demonstration purposes.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navMenu = document.getElementById('navMenu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
+        });
+        
+        // Adjust mobile menu for window resize
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) {
+                navMenu.style.display = 'flex';
+            } else {
+                navMenu.style.display = 'none';
+            }
+        });
+        
+        // Contact form submission
+        const contactForm = document.getElementById('contactForm');
+        const messageContainer = document.getElementById('messageContainer');
+        
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            // Get form values
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                service: document.getElementById('service').value,
+                country: document.getElementById('country').value,
+                message: document.getElementById('message').value,
+                timestamp: new Date().toLocaleString()
+            };
+            
+            // Show loading state
+            const submitBtn = contactForm.querySelector('.submit-btn');
+            const originalText = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+            submitBtn.disabled = true;
+            
+            try {
+                // In a real implementation, this would be an actual API call
+                // For demo purposes, we'll simulate API call with setTimeout
+                await new Promise(resolve => setTimeout(resolve, 1500));
+                
+                // Simulate sending email to khushirai.1908@gmail.com
+                console.log('Form data to be sent to khushirai.1908@gmail.com:', formData);
+                
+                // Show success message
+                messageContainer.innerHTML = `
+                    <div class="message success">
+                        <i class="fas fa-check-circle"></i> 
+                        Thank you for your inquiry! Your message has been sent successfully. We will contact you shortly at ${formData.email}.
+                    </div>
+                `;
+                messageContainer.style.display = 'block';
+                
+                // Reset form
+                contactForm.reset();
+                
+                // In a real implementation, you would send the data to your server
+                // which would then forward it to khushirai.1908@gmail.com
+                // Example using EmailJS or a backend server:
+                /*
+                // Using EmailJS (requires setup)
+                emailjs.send('service_id', 'template_id', formData)
+                    .then(() => {
+                        show success message
+                    }, (error) => {
+                        show error message
+                    });
+                
+                // Or using fetch to your backend
+                fetch('your-backend-endpoint', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify(formData)
+                })
+                .then(response => response.json())
+                .then(data => {
+                    show success message
+                })
+                .catch(error => {
+                    show error message
+                });
+                */
+                
+            } catch (error) {
+                // Show error message
+                messageContainer.innerHTML = `
+                    <div class="message error">
+                        <i class="fas fa-exclamation-circle"></i> 
+                        There was an error sending your message. Please try again or contact us directly at info@solitairevisamohali.com.
+                    </div>
+                `;
+                messageContainer.style.display = 'block';
+                console.error('Form submission error:', error);
+            } finally {
+                // Reset button
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+                
+                // Scroll to message
+                messageContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                
+                // Hide message after 10 seconds
+                setTimeout(() => {
+                    messageContainer.style.display = 'none';
+                }, 10000);
+            }
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (window.innerWidth <= 768) {
+                        navMenu.style.display = 'none';
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
